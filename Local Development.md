@@ -65,7 +65,7 @@ sudo chown _www files
 
 Note the password that is shown in the output; you will use it to log in.
 
-Now, in Terminal, open your browser and point it to http://bugguide.test. (Opening this way might prevent the browser from trying to go https://bugguide.test instead.
+Now, in Terminal, open your browser and point it to http://bugguide.test. (Opening this way might prevent the browser from trying to go https://bugguide.test instead.)
 
 ```
 open -a Firefox http://bugguide.test
