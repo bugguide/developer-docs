@@ -45,9 +45,7 @@ Now tell MacOS to read the new hosts file with this flood of arcane commands:
 
 ```
   sudo killall -HUP mDNSResponder
-  echo 'Clearing DNS cache with sudo killall mDNSResponderHelper'
   sudo killall mDNSResponderHelper
-  echo 'Clearing DNS cache with sudo dscacheutil -flushcache'
   sudo dscacheutil -flushcache
 ```
 
