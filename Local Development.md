@@ -105,12 +105,12 @@ $conf['apachesolr_read_only'] = "1";
 
 Create some content as follows:
 
-Node 1: Page, titled About
-Node 2: Page, titled Page 2
-Node 3: Guide Page, Scientific Name "Arthropoda", Taxon 1100, no parent
-Node 4: Guide Page, Scientific Name "Chelicerata", Taxon 1200, parent 3
-Node 5: Guide Page, Scientific Name "Arachnida", Taxon 1400, parent 3,4
-Node 6: Guide Page, no Scientific Name, Common Name "ID Request", no Taxon, no parent
+- Node 1: Page, titled About
+- Node 2: Page, titled Page 2
+- Node 3: Guide Page, Scientific Name "Arthropoda", Taxon 1100, no parent
+- Node 4: Guide Page, Scientific Name "Chelicerata", Taxon 1200, parent 3
+- Node 5: Guide Page, Scientific Name "Arachnida", Taxon 1400, parent 3,4
+- Node 6: Guide Page, no Scientific Name, Common Name "ID Request", no Taxon, no parent
 
 Now we have a tree of three nodes (Arthropoda -> Chelicerata -> Arachnida) and ID Request which is hardcoded to node 6.
 
