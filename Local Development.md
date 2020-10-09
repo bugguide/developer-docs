@@ -71,6 +71,8 @@ Now, in Terminal, open your browser and point it to http://bugguide.test. (Openi
 open -a Firefox http://bugguide.test
 ```
 
+If you are importing a database from the migration pipeline, you can stop here. But if your intent is to monkey about with the theme or the code or tests without having 1.7 million nodes getting in your way, continue.
+
 If everything worked, you should be looking at a Drupal 7 site. Log in and go to Configuration / File System. Change the files path from sites/default/files to files.
 
 Now we will do a bunch of setup with drush:
