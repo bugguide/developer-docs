@@ -30,6 +30,8 @@ Add the following to /opt/local/etc/apache2/extra/httpd-vhosts.conf:
 </VirtualHost>
 ```
 
+Restart Apache so it will read the new vhost.
+
 That's not enough, though. We need to have local DNS resolve the bugguide.test hostname to your machine. Do that by editing /etc/hosts and adding bugguide.test behind local.test:
 
 ```
