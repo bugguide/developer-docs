@@ -34,7 +34,7 @@ https://bugguide.net/node
 
 https://bugguide.net/node?from=20
 
-8. View a specific piece of content. This integer is an identifier; the latest identifier as of this morning is 1777246.
+8. View a specific piece of content. This integer is a unique identifier; the latest identifier as of this morning is 1904411.
 
 https://bugguide.net/node/view/1000306
 
