@@ -117,3 +117,27 @@ Create some content as follows:
 Now we have a tree of three nodes (Arthropoda -> Chelicerata -> Arachnida) and ID Request which is hardcoded to node 6.
 
 This should now be a site that is functional enough to add an image to ID Request, test theming, and poke around.
+
+## Making Images Visible
+
+If you are going to want your local copy of bugguide.test to pull images from beta.bugguide.net instead of from your filesystem (which is probably what you want unless you have room for a million files), then you have two options:
+
+#### a) Add the following lines just before the </VirtualHost> line ####
+
+```
+    RewriteEngine On
+    RewriteRule ^/files/(.*)$ https://beta.bugguide.net/files/$1 [R=301,NC,L]
+```
+
+Then restart Apache so it will read the new virtualhost.
+
+#### b) Install and configure Stage File Proxy ####
+
+1. Download https://www.drupal.org/project/stage_file_proxy
+
+2. Add the following to `sites/default/settings.php`:
+```php
+$conf['stage_file_proxy_origin'] = 'https://beta.bugguide.net';
+$conf['stage_file_proxy_hotlink'] = TRUE;
+```
+3. Install Stage File Proxy module.
