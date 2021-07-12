@@ -141,3 +141,7 @@ $conf['stage_file_proxy_origin'] = 'https://beta.bugguide.net';
 $conf['stage_file_proxy_hotlink'] = TRUE;
 ```
 3. Install Stage File Proxy module.
+
+#### c) Use an external drive
+
+Maybe you have a large external SSD sitting around that can handle the 700GB+ raw files directory. If so, this is just a note to remind you that doing development on OS X Catalina and later will require you to give access to your httpd binary (and the daemondo process that starts it if you're using MacPorts) in the Security & Privacy control panel, or you will lose all your hair trying to figure out why "pcfg_openfile: unable to check htaccess file, ensure it is readable" keeps happening.
