@@ -2,7 +2,9 @@
 
 BugGuide is a Drupal 7 site.
 
-Production is running on RHEL8 and Apache 2.4 plus PHP 7.3, with Percona as the database.
+Production (bg1) is running on RHEL8 and Apache 2.4 plus PHP 7.4, with Percona 8.0 as the database.
+
+If you are doing this frequently you'll want the newbg script from the (private) bugguide_dev_tools repository which automates much of the below.
 
 ## Installing on MacOS running macports-lamp
 
@@ -11,6 +13,7 @@ Clone the bugguide repository into your Sites directory:
 ```
 cd ~/Sites
 git clone git@github.com:bugguide/bugguide.git
+git submodule update --init
 ```
 
 We could access the site at http://local.test/bugguide but that would be annoying since BugGuide itself is running on a base domain. We want to access it at http://bugguide.test. So let's set up a special vhost just for BugGuide.
@@ -49,7 +52,7 @@ Now tell MacOS to read the new hosts file with this flood of arcane commands:
   sudo dscacheutil -flushcache
 ```
 
-Use drush to perform the Drupal 7 installation:
+Use drush to perform the Drupal 7 installation ($DBCREDS contains mymysqlusername:mymysqlpassword ):
 
 ```
 cd ~/Sites/bugguide
@@ -71,7 +74,7 @@ Now, in Terminal, open your browser and point it to http://bugguide.test. (Openi
 open -a Firefox http://bugguide.test
 ```
 
-If you are importing a database from the migration pipeline, you can stop here. But if your intent is to monkey about with the theme or the code or tests without having 1.7 million nodes getting in your way, continue.
+If you are importing a database from the migration pipeline, you can stop here. But if your intent is to monkey about with the theme or the code or tests without having 2 million nodes getting in your way, continue.
 
 If everything worked, you should be looking at a Drupal 7 site. Log in and go to Configuration / File System. Change the files path from sites/default/files to files.
 
