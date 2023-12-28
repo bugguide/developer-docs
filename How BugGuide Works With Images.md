@@ -1,6 +1,6 @@
 # How BugGuide Works With Images
 
-BugGuide has 1.6 million images and growing. If you put 1.6 million images into a directory, your filesystem will be very sad. Thus, BugGuide has to do special things to keep the filesystem happy and the system responsive. "Special things" basically boils down to storing images like this:
+BugGuide has 1.9 million images and growing. If you put 1.9 million images into a directory, your filesystem will be very sad. Thus, BugGuide has to do special things to keep the filesystem happy and the system responsive. "Special things" basically boils down to storing images like this:
 
     files/raw/7HD/HIH/7HDHIHAHXHTHMH1HKLDH0L6ZHLCHQL5ZRLGZ4H4ZRLVH8HVH4H4Z4H6ZGLLR4L6ZSLTHNH3HEH1HMH.jpg
 
@@ -54,7 +54,9 @@ which is NOT the correct obfuscation string stored in file_managed! Instead, the
 
 ## Derivative Images ##
 
-Because Drupal core doesn't know about our scalable image storing, we have to tell it. 
+Because Drupal core doesn't know about our scalable image storing, we have to tell it.
+
+There are two main cases when we have to step in.
 
 A core hack to core image.module detects when the original image is being requested and slips in the correct URI.
 
